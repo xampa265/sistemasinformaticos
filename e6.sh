@@ -21,21 +21,22 @@ done
 suma=0;
 valoragua1=20/100;
 valoragua2=10/100;
-if [ $valor1 -le 50 ]; then 
-
-	let suma=$valor1*20;
-	echo "El valor total del agua es a 20 € el litro: ";
-	echo $suma;
-
+if [ $valor1 -le 50 ]; then
+	echo "El valor total del agua es a 20 €  ";
+	
+	
 else if [ $valor1 -le 200 ];  then 
-	let suma=$valor1*$valoragua1;
-	echo "El valor total del agua es a 0.20 € el litro: ";
-	echo $suma;
+	let resta=$valor1-50;
+	echo "El valor total del agua es:";	
+	echo "scale=2;($resta*$valoragua1)+20"|bc -l;	
+
 
 else if [ $valor1 -gt 200 ];  then 
-	let suma=$valor1*$valoragua2;
-	echo "El valor total del agua es a 0.10 € el litro: ";
-	echo $suma;
+	let resta=$valor1-200;
+	let valor2=150*$valoragua2;
+	
+	echo "El valor total del agua es : ";
+	echo "scale=2;($resta*$valoragua1)+20+$valor2"|bc -l;	
 
 
 fi
