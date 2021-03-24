@@ -14,6 +14,6 @@ done
 
 echo "La suma total es: "
 echo $suma;
-let media=$suma/$contador;
+let media='echo "scale=2;  $suma/$contador" | bc ' ;
 echo "la media es: "
 echo $media;

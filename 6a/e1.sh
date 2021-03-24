@@ -18,16 +18,4 @@ else echo "El segundo es mayor";
 fi
 fi
 
-patron='^[0-9]+$'
-while :
-do
-	read -p "Introduce una nota: " nota
-		if [[ $nota =~ $patron ]];then
-			if [ $nota -gt 0 ] || [ $nota -lt 11 ];then
-				echo "$nota es número valido"
-				break
-			fi
-		else
-			echo "$nota no es un numero"
-		fi
-done
+

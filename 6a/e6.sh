@@ -36,7 +36,7 @@ else if [ $valor1 -gt 200 ];  then
 	let valor2=150*$valoragua2;
 	
 	echo "El valor total del agua es : ";
-	echo "scale=2;($resta*$valoragua1)+20+$valor2"|bc -l;	
+	echo "scale=2;($resta*$valoragua1)+20+$valor2 | bc -l;	
 
 
 fi
